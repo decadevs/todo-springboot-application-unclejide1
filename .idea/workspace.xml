@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b69a563-2748-4d36-9cc7-df1cd8164a25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/MyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/services/TaskService.java" afterDir="false" />
     </list>
@@ -83,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581015677353</updated>
       <workItem from="1581015681631" duration="705000" />
-      <workItem from="1581016553998" duration="5263000" />
+      <workItem from="1581016553998" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="add spring initializer folder and application.properties file">
       <created>1581016794482</created>
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581031022042</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add MyResponse class to handle formatting http response">
+      <created>1581032038434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581032038434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +154,7 @@
     <MESSAGE value="add Task.java to create a table in the database" />
     <MESSAGE value="add repository folder and TaskRespository interface to handle database methods;" />
     <MESSAGE value="add service folder that contains taskService class to implement business logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add service folder that contains taskService class to implement business logic" />
+    <MESSAGE value="add MyResponse class to handle formatting http response" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MyResponse class to handle formatting http response" />
   </component>
 </project>
