@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b69a563-2748-4d36-9cc7-df1cd8164a25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/TaskRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -31,6 +32,10 @@
   </component>
   <component name="ProjectId" id="1XRjD0dToHQdmsKBIPSZSag0Lfy" />
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -73,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581015677353</updated>
       <workItem from="1581015681631" duration="705000" />
-      <workItem from="1581016553998" duration="1663000" />
+      <workItem from="1581016553998" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="add spring initializer folder and application.properties file">
       <created>1581016794482</created>
@@ -96,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581017154403</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add Task.java to create a table in the database">
+      <created>1581023141367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581023141367</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add spring initializer folder and application.properties file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring initializer folder and application.properties file" />
+    <MESSAGE value="add Task.java to create a table in the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Task.java to create a table in the database" />
   </component>
 </project>
