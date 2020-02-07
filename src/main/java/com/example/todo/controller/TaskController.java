@@ -85,4 +85,17 @@ public class TaskController {
         response.setStatus(statusCode.value());
         return  new MyResponse<>(statusCode, message, updatedTodo);
     }
+
+    @RequestMapping(path="{id}", method = RequestMethod.DELETE)
+    public MyResponse<Long> deleteTask(@PathVariable(name = "id") Long id, HttpServletResponse response){
+        Long deletedTaskId = taskService.deleteTask(id);
+        HttpStatus statusCode = HttpStatus.OK;
+        String message = "Task Deleted Successfully";
+        if(deletedTaskId == null){
+            statusCode = HttpStatus.BAD_REQUEST;
+            message = "Task does not exist";
+        }
+        response.setStatus(statusCode.value());
+        return  new MyResponse<>(statusCode, message, deletedTaskId);
+    }
 }
