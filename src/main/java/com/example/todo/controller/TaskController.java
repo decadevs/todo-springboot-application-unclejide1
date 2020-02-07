@@ -4,6 +4,7 @@ import com.example.todo.model.Task;
 import com.example.todo.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -32,31 +33,56 @@ public class TaskController {
 
     @GetMapping
     @RequestMapping("{id}")
-    public  MyResponse<Task> getOneTask(@PathVariable Long id){
-        Task t = taskService.getATask(id);
-        if(t == null){
-            return new MyResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, "No task with this id: " + id, null);
+    public  MyResponse<Task> getOneTask(@PathVariable Long id, HttpServletResponse response){
+        Task retrievedTask = taskService.getATask(id);
+        HttpStatus statusCode = HttpStatus.CREATED;
+        String message = "Task gotten successfully";
+        if(retrievedTask == null){
+            statusCode = HttpStatus.BAD_REQUEST;
+            message = "Task does not exist";
         }
-        return  new MyResponse<>(HttpStatus.OK, "Retrieved Successfully", t);
+        response.setStatus(statusCode.value());
+        return  new MyResponse<>(statusCode, message, retrievedTask);
     }
 
-    @GetMapping
-    @RequestMapping("/")
-    public MyResponse<List<Task>> getAllTask(){
-        List<Task> t = taskService.getAllTask();
-        if(t.isEmpty()){
-            return new MyResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, "No task Available", null);
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public MyResponse<List<Task>> getAllTask(HttpServletResponse response){
+        List<Task> allTask = taskService.getAllTask();
+        HttpStatus statusCode = HttpStatus.CREATED;
+        String message = "All tasks has been retrieved successfully";
+        if(allTask.isEmpty()){
+            statusCode = HttpStatus.BAD_REQUEST;
+            message = "task does not exist";
         }
-        return  new MyResponse<>(HttpStatus.OK, "Retrieved Successfully", t);
+        response.setStatus(statusCode.value());
+        return  new MyResponse<>(statusCode, message, allTask);
     }
 
     @GetMapping
     @RequestMapping("/Status/{status}")
-    public MyResponse<List<Task>> findByStatus(@PathVariable String status){
-        List<Task> t = taskService.findByStatus(status);
-        if(t.isEmpty()){
-            return new MyResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, "No task Available", null);
+    public MyResponse<List<Task>> findByStatus(@PathVariable String status, HttpServletResponse response){
+        List<Task> taskFoundByStatus = taskService.findByStatus(status);
+        HttpStatus statusCode = HttpStatus.CREATED;
+        String message = "All " + status + " tasks has been retrieved successfully";
+        if(taskFoundByStatus.isEmpty()){
+            statusCode = HttpStatus.BAD_REQUEST;
+            message = status + " task does not exist";
         }
-        return  new MyResponse<>(HttpStatus.OK, "Retrieved Successfully", t);
+        response.setStatus(statusCode.value());
+        return  new MyResponse<>(statusCode, message, taskFoundByStatus);
+    }
+
+    @RequestMapping(path="{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public MyResponse<Task> updateTask(@RequestBody Task task, @PathVariable Long id, HttpServletResponse response ){
+            Task updatedTodo = taskService.updateTask(task, id);
+            HttpStatus statusCode = HttpStatus.CREATED;
+            String message = "Task updated successfully";
+            if(updatedTodo == null){
+                statusCode = HttpStatus.BAD_REQUEST;
+                message = "Task does not exist";
+            }
+        response.setStatus(statusCode.value());
+        return  new MyResponse<>(statusCode, message, updatedTodo);
     }
 }
