@@ -27,4 +27,23 @@ public class TaskService {
     public List<Task> getAllTask() {
         return taskRepository.findAll();
     }
+
+    public Task getATask(Long id){
+        return taskRepository.findById(id).orElse(null);
+    }
+
+
+    public List<Task> findByStatus(String status) {
+        return taskRepository.findByStatus(status);
+    }
+
+    public Task updateTask(Task taskToUpdate, Long id){
+       Task oldTask = taskRepository.findById(id).orElse(null);
+       if(oldTask != null){
+           oldTask.setTitle(taskToUpdate.getTitle());
+           oldTask.setDescription(taskToUpdate.getDescription());
+           return taskRepository.save(oldTask);
+       }
+       return  taskToUpdate;
+    }
 }

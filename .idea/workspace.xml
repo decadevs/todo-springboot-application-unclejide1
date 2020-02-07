@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b69a563-2748-4d36-9cc7-df1cd8164a25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/TaskRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/services/TaskService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581015677353</updated>
       <workItem from="1581015681631" duration="705000" />
-      <workItem from="1581016553998" duration="5571000" />
+      <workItem from="1581016553998" duration="18667000" />
     </task>
     <task id="LOCAL-00001" summary="add spring initializer folder and application.properties file">
       <created>1581016794482</created>
@@ -132,7 +133,56 @@
       <option name="project" value="LOCAL" />
       <updated>1581032038434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add / to home and find all data in database">
+      <created>1581032130328</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581032130328</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add service folder to handle  business login, TaskService with methods to create new tasks">
+      <created>1581032226138</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581032226138</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add routes to createTask, read all tasks, read one task and find class by status">
+      <created>1581035343593</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581035343593</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add product advice java class">
+      <created>1581090091281</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581090091281</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add messageDTO class">
+      <created>1581090236566</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581090236566</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add update route and update method to makeUpdates to TaskController.java and modified methods in taskController">
+      <created>1581090381685</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581090381685</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add empty constructor to TaskModel.java">
+      <created>1581090493087</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1581090493087</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +205,13 @@
     <MESSAGE value="add repository folder and TaskRespository interface to handle database methods;" />
     <MESSAGE value="add service folder that contains taskService class to implement business logic" />
     <MESSAGE value="add MyResponse class to handle formatting http response" />
-    <option name="LAST_COMMIT_MESSAGE" value="add MyResponse class to handle formatting http response" />
+    <MESSAGE value="add / to home and find all data in database" />
+    <MESSAGE value="add service folder to handle  business login, TaskService with methods to create new tasks" />
+    <MESSAGE value="add routes to createTask, read all tasks, read one task and find class by status" />
+    <MESSAGE value="add product advice java class" />
+    <MESSAGE value="add messageDTO class" />
+    <MESSAGE value="add update route and update method to makeUpdates to TaskController.java and modified methods in taskController" />
+    <MESSAGE value="add empty constructor to TaskModel.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add empty constructor to TaskModel.java" />
   </component>
 </project>
